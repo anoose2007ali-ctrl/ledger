@@ -1,11 +1,11 @@
-# Personal Ledger (build b13)
+# Personal Ledger (build b14)
 
 This build runs entirely from your own files, with nothing downloaded from other sites, so it opens reliably and works offline.
 
 ## Uploading it
 1. Upload every file in this folder to your GitHub repo (Add file > Upload files), overwriting the old ones, then commit.
 2. These old files are no longer used and can be deleted from the repo (harmless if left): `worker.js`, `react-shim.js`, `react-dom-client-shim.js`, `lucide-shim.js`.
-3. Wait for Cloudflare to finish deploying, then open your site **twice** (the first visit clears the old cached copy). You should see **b13** at the bottom of the app.
+3. Wait for Cloudflare to finish deploying, then open your site **twice** (the first visit clears the old cached copy). You should see **b14** at the bottom of the app.
 4. On your phone, do NOT delete the home screen icon when updating. A newly added icon starts with empty storage and has to download your data again by signing in. Just open the app twice.
 
 ## What's new

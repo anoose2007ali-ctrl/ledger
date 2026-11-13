@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Personal Ledger (b13)</title>
+<title>Personal Ledger (b14)</title>
 <link rel="manifest" href="./manifest.json" />
 <meta name="theme-color" content="#2F5D4F" />
 <link rel="apple-touch-icon" href="./icon-192.png" />
@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-<div id="root"><div id="boot">Loading your ledger… (build b13)</div></div>
+<div id="root"><div id="boot">Loading your ledger… (build b14)</div></div>
 <div id="boot-error"></div>
 
 <script>
@@ -29,9 +29,17 @@
     if (window.__booted) return;
     var box = document.getElementById("boot-error");
     box.style.display = "block";
-    box.textContent = "Couldn't start the app (build b13):\n\n" + (e.message || "unknown error") +
+    box.textContent = "Couldn't start the app (build b14):\n\n" + (e.message || "unknown error") +
       "\n\nTry closing and reopening it. If it keeps happening, screenshot this box.";
   });
+</script>
+<script>
+  // Arabic typing: let each text box and line pick its own direction from what is written in it.
+  (function () {
+    var q = "input,textarea,h1,.text-sm:not(.flex),.text-xs:not(.flex),.text-lg:not(.flex)", t = 0;
+    function run() { t = 0; document.querySelectorAll(q).forEach(function (e) { if (!e.hasAttribute("dir")) e.setAttribute("dir", "auto"); }); }
+    new MutationObserver(function () { if (!t) t = requestAnimationFrame(run); }).observe(document.documentElement, { childList: true, subtree: true });
+  })();
 </script>
 <script src="./fb.js"></script>
 <script src="./storage-shim.js"></script>
@@ -39,7 +47,7 @@
 <script>
   // On a new build, clear any old cached copy once, then register the offline cache.
   (async function () {
-    var BUILD = "b13";
+    var BUILD = "b14";
     try {
       if (localStorage.getItem("ledger-build-seen") !== BUILD) {
         if (navigator.serviceWorker) {

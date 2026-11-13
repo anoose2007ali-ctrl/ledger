@@ -1,6 +1,6 @@
 // Offline cache. Only handles this site's own files, so outside requests
 // (like Google sign-in) are never touched.
-const CACHE = "ledger-cache-b13";
+const CACHE = "ledger-cache-b14";
 const ASSETS = ["./", "./index.html", "./app.js", "./style.css", "./fb.js", "./storage-shim.js",
   "./manifest.json", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 
