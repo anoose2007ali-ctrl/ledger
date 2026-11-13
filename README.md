@@ -1,12 +1,12 @@
-# Personal Ledger (build b12)
+# Personal Ledger (build b13)
 
 This build runs entirely from your own files, with nothing downloaded from other sites, so it opens reliably and works offline.
 
 ## Uploading it
 1. Upload every file in this folder to your GitHub repo (Add file > Upload files), overwriting the old ones, then commit.
 2. These old files are no longer used and can be deleted from the repo (harmless if left): `worker.js`, `react-shim.js`, `react-dom-client-shim.js`, `lucide-shim.js`.
-3. Wait for Cloudflare to finish deploying, then open your site **twice** (the first visit clears the old cached copy). You should see **b12** at the bottom of the app.
-4. On your phone: delete the old home screen icon, then add it again.
+3. Wait for Cloudflare to finish deploying, then open your site **twice** (the first visit clears the old cached copy). You should see **b13** at the bottom of the app.
+4. On your phone, do NOT delete the home screen icon when updating. A newly added icon starts with empty storage and has to download your data again by signing in. Just open the app twice.
 
 ## What's new
 - **Home tab** with Expenses (monthly total by category), Pantry (fruits, vegetables, bread and more, with +/- counts and a "running low" flag) and Chores (repeat every N days, "Done" button, due/overdue).

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Personal Ledger (b12)</title>
+<title>Personal Ledger (b13)</title>
 <link rel="manifest" href="./manifest.json" />
 <meta name="theme-color" content="#2F5D4F" />
 <link rel="apple-touch-icon" href="./icon-192.png" />
@@ -20,7 +20,7 @@
 </style>
 </head>
 <body>
-<div id="root"><div id="boot">Loading your ledger… (build b12)</div></div>
+<div id="root"><div id="boot">Loading your ledger… (build b13)</div></div>
 <div id="boot-error"></div>
 
 <script>
@@ -29,7 +29,7 @@
     if (window.__booted) return;
     var box = document.getElementById("boot-error");
     box.style.display = "block";
-    box.textContent = "Couldn't start the app (build b12):\n\n" + (e.message || "unknown error") +
+    box.textContent = "Couldn't start the app (build b13):\n\n" + (e.message || "unknown error") +
       "\n\nTry closing and reopening it. If it keeps happening, screenshot this box.";
   });
 </script>
@@ -39,7 +39,7 @@
 <script>
   // On a new build, clear any old cached copy once, then register the offline cache.
   (async function () {
-    var BUILD = "b12";
+    var BUILD = "b13";
     try {
       if (localStorage.getItem("ledger-build-seen") !== BUILD) {
         if (navigator.serviceWorker) {
@@ -53,6 +53,7 @@
         localStorage.setItem("ledger-build-seen", BUILD);
       }
     } catch (e) {}
+    try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" }).catch(function () {});
   })();
 </script>
