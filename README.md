@@ -1,13 +1,18 @@
-# Personal Ledger (build b17)
+# Personal Ledger (build b18)
 
 Live at https://anoose2007ali-ctrl.github.io/ledger-app/ (GitHub Pages + Firebase sync, collection `ledger/{uid}`).
 
-## Updating to b17
+## Updating to b18
 1. Before uploading, make sure every device is signed in and shows **Synced** under the page title.
 2. Upload the **files inside** this folder (not the folder, not the zip) to the repo with Add file > Upload files, replacing the old ones, then commit.
-3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b17**.
+3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b18**.
 4. Don't delete the home screen icon. A new icon starts with empty storage.
 5. Open Settings (gear) > **Download backup** and keep the file somewhere safe, like Google Drive.
+
+## What's new in b18
+- **New home screen icon:** the haloed barn owl (art by DogCryptid, credited in the app footer). There's also a dark splash screen behind it while the app opens.
+- **Android:** the icon updates by itself within a day or so of opening the app.
+- **iPhone:** iOS keeps the old icon until you add the app to the Home Screen again. Removing the icon also clears that copy's local storage, so first make sure it says **Synced** and download a backup. Then remove the icon, open the site in Safari, choose Share > Add to Home Screen, and sign in again. Your data comes back from sync.
 
 ## What's new in b17
 

@@ -1,8 +1,8 @@
 // Offline cache. Only handles this site's own files, so outside requests
 // (like Google sign-in) are never touched.
-const CACHE = "ledger-cache-b17";
+const CACHE = "ledger-cache-b18";
 const ASSETS = ["./", "./index.html", "./app.js", "./style.css", "./fb.js", "./storage-shim.js",
-  "./manifest.json", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
+  "./manifest.json", "./icon-180.png", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));
