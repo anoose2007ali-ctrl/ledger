@@ -1,34 +1,32 @@
-# Personal Ledger (build b14)
+# Personal Ledger (build b15): Life OS
 
-This build runs entirely from your own files, with nothing downloaded from other sites, so it opens reliably and works offline.
+Live at https://anoose2007ali-ctrl.github.io/ledger-app/ (GitHub Pages + Firebase sync, collection `ledger/{uid}`).
 
-## Uploading it
-1. Upload every file in this folder to your GitHub repo (Add file > Upload files), overwriting the old ones, then commit.
-2. These old files are no longer used and can be deleted from the repo (harmless if left): `worker.js`, `react-shim.js`, `react-dom-client-shim.js`, `lucide-shim.js`.
-3. Wait for Cloudflare to finish deploying, then open your site **twice** (the first visit clears the old cached copy). You should see **b14** at the bottom of the app.
-4. On your phone, do NOT delete the home screen icon when updating. A newly added icon starts with empty storage and has to download your data again by signing in. Just open the app twice.
+## Updating to b15
+1. Before uploading, make sure every device is signed in and shows **Synced**.
+2. Upload the **files inside** this folder (not the folder, not the zip) to the repo with Add file > Upload files, replacing the old ones, then commit.
+3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b15**.
+4. Don't delete the home screen icon. A new icon starts with empty storage.
 
-## What's new
-- **Home tab** with Expenses (monthly total by category), Pantry (fruits, vegetables, bread and more, with +/- counts and a "running low" flag) and Chores (repeat every N days, "Done" button, due/overdue).
-- **Sync** now uses Google sign-in (the method from your guide). Until you finish the steps below, the app works on this device only, and the Export/Import buttons still work.
+## What's new in b15
 
-## Turning on sync (Firebase, free)
-1. console.firebase.google.com > **Add project** (any name, no Analytics, stay on the free Spark plan).
-2. **Build > Authentication > Get started > Google > Enable** > Save.
-3. **Authentication > Settings > Authorized domains > Add domain**: `medicoledger.anas-2025000993.workers.dev` (no https://).
-4. **Build > Firestore Database > Create**: Standard, `(default)`, a region near you, **Production mode**.
-5. In Firestore **Rules**, replace everything with this, then **Publish**:
-```
-rules_version = '2';
-service cloud.firestore {
-  match /databases/{database}/documents {
-    match /ledger/{uid} {
-      allow read, write: if request.auth != null && request.auth.uid == uid;
-    }
-  }
-}
-```
-6. Gear icon > **Project settings > Your apps > </>**: nickname anything, leave Hosting **unticked**, choose **script tag**. Copy the `firebaseConfig` values into `fb.js` (replace `null` with the block shown in that file) and upload `fb.js`.
-7. Open the app, tap the circular-arrow icon, **Sign in with Google**. Do the same on your other devices.
+### Life tab
+- **Tasks:** Overdue, Today, Upcoming and Someday groups, filter by area, and a link to a goal.
+- **Habits:** Anki reviews, Exercise / walk, Reading (psychology) and Plan tomorrow, with a 7-day grid, streaks and a weekly %. Choose which days each habit runs.
+- **Goals:** track either the tasks linked to the goal, or a number (for example 30 workouts), with +1/−1 buttons.
+- **Areas:** Medicine & University, Class leadership, The Helpers / MedSync, Health & Body and Money & Home. Each has a one-line vision and a colour.
+- **Ideas:** captured thoughts. Turn any of them into a task.
+- **Weekly review:** prompted on Today from **Thursday 5 pm** until you do it. It shows the week's spending, tasks done, habits, revisits and upcoming exams, then asks what went well, what didn't and what to change, plus your top 3 for next week, which can be added as tasks.
 
-Each section (Finance, University, Home...) keeps whichever copy was edited most recently, and changes are sent a few seconds after you make them.
+### Study tab
+- **Lectures:** every lecture from University with the steps Attended → Notes → Anki cards → Revised.
+- **Revise:** revisit each lecture 1, 3, 7, 14 and 30 days after you start it. Spacing is measured from the day you actually do each revisit.
+- **Exams:** date, the modules covered, a countdown and a coverage %.
+
+### Everywhere
+- **+ button:** quick-add a task, an idea or an expense from any screen.
+- **Today:** shows exam countdowns, tasks due, today's habits and lectures to revisit, followed by money and home.
+- Dates now use your local time, so an expense logged after midnight gets today's date.
+- The old PARA data was cleared, as you asked.
+
+Section order and visibility for Life and Study are in Customize (gear icon).
