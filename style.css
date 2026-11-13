@@ -726,3 +726,14 @@ input, textarea, select { unicode-bidi: plaintext; }
 .lx-tab { flex: 1 0 54px; min-width: 54px; padding: 8px 2px; font-size: 10.5px; }
 /* room to scroll the last card above the + button */
 .lo-pad { height: 72px; }
+
+/* b16 */
+.lo-planrow { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; padding: 8px 0; border-top: 1px solid #EFEBE1; min-height: 48px; }
+.lo-billrow { padding: 8px 0; border-top: 1px solid #EFEBE1; }
+.lo-nudge { display: flex; align-items: center; justify-content: space-between; gap: 8px; background: #F1E6D6; color: #8C5A2B; border-radius: 10px; padding: 8px 12px; margin-bottom: 12px; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 12px; }
+.lo-undo { position: fixed; z-index: 46; left: max(16px, calc(50% - 14rem + 16px)); bottom: calc(92px + env(safe-area-inset-bottom)); display: flex; align-items: center; gap: 14px; background: #232620; color: #FBFAF6; border-radius: 12px; padding: 10px 14px; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 14px; box-shadow: 0 8px 24px rgba(0,0,0,.25); animation: lo-up .2s ease-out; }
+.lo-undo button { color: #F3D9A4; font-weight: 700; min-height: 32px; }
+@keyframes lo-up { from { transform: translateY(12px); opacity: 0; } to { transform: none; opacity: 1; } }
+.lo-sync { display: flex; align-items: center; gap: 6px; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 11px; color: #8A8672; margin-top: 2px; }
+.lo-sync i, .lo-syncdot { width: 7px; height: 7px; border-radius: 999px; display: inline-block; flex-shrink: 0; }
+.lo-syncdot { position: absolute; top: 3px; right: 3px; width: 8px; height: 8px; border: 1.5px solid #EFEBE1; }
