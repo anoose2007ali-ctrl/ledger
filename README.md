@@ -1,13 +1,28 @@
-# Personal Ledger (build b18)
+# Personal Ledger (build b19)
 
 Live at https://anoose2007ali-ctrl.github.io/ledger-app/ (GitHub Pages + Firebase sync, collection `ledger/{uid}`).
 
-## Updating to b18
+## Updating to b19
 1. Before uploading, make sure every device is signed in and shows **Synced** under the page title.
 2. Upload the **files inside** this folder (not the folder, not the zip) to the repo with Add file > Upload files, replacing the old ones, then commit.
-3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b18**.
+3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b19**.
 4. Don't delete the home screen icon. A new icon starts with empty storage.
 5. Open Settings (gear) > **Download backup** and keep the file somewhere safe, like Google Drive.
+
+## What's new in b19
+
+### Week schedule (Study > Week)
+1. Send your week's schedule photo to Claude in a chat. You get back a code starting with `LEDGER-WEEK:`, with only Group A lectures and A2 GDs and labs.
+2. In Study > Week, tap **Import week**, paste the code, check which module each lecture goes into, and import.
+3. Lectures are added to their University module, so they enter Study (steps, revisits, exam coverage and study plan). Labs and GDs become tasks on their day, plus a **"Prepare for…"** task the day before.
+4. **Today** shows today's classes with **Now** and **Next** labels. From 3 pm it shows tomorrow's classes once today's are over.
+- **Add photo** keeps the original photo for that week. The photo stays on the phone (it's too big to sync), but the sessions sync.
+- **Copy to next week** is for weeks that barely change. You can then edit, add or delete single sessions.
+- Importing the same week again replaces its sessions and never duplicates lectures or tasks.
+
+### App improvements (Settings > App improvements, or Life > Ideas)
+- Notes on what's **Not added yet**, **Planned** and **Added**, already filled in with everything from b12 to b19.
+- **Copy all for Claude** copies the whole list, ready to paste into a chat when you want the next build.
 
 ## What's new in b18
 - **New home screen icon:** the haloed barn owl (art by DogCryptid, credited in the app footer). There's also a dark splash screen behind it while the app opens.

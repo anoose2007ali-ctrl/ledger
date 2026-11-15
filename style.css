@@ -753,3 +753,19 @@ input, textarea, select { unicode-bidi: plaintext; }
 .lo-heat button { aspect-ratio: 1; min-width: 8px; border-radius: 2px; border: 1px solid; padding: 0; }
 .lo-avatar { width: 36px; height: 36px; min-width: 36px; border-radius: 999px; background: #EAE1EC; color: #6B4E71; display: flex; align-items: center; justify-content: center; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-weight: 700; font-size: 15px; }
 .lo-count { min-width: 24px; height: 24px; padding: 0 7px; border-radius: 999px; background: #6B4E71; color: #FBFAF6; display: inline-flex; align-items: center; justify-content: center; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 12px; font-weight: 700; }
+
+/* b19 */
+.lo-weekbtns { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 4px; }
+.lo-sess { display: flex; align-items: center; gap: 10px; width: 100%; text-align: left; padding: 9px 0; min-height: 52px; }
+.lo-sess + .lo-sess { border-top: 1px solid #EFEBE1; }
+.lo-sess-time { display: flex; flex-direction: column; width: 44px; flex-shrink: 0; font-family: 'IBM Plex Mono', ui-monospace, monospace; line-height: 1.2; }
+.lo-sess-time b { font-size: 13px; color: #232620; font-weight: 600; }
+.lo-sess-time span { font-size: 11px; color: #8A8672; }
+.lo-sess-bar { width: 3px; align-self: stretch; border-radius: 3px; flex-shrink: 0; }
+.lo-badge { display: inline-flex; align-items: center; padding: 1px 7px; border-radius: 999px; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 11px; font-weight: 700; line-height: 18px; }
+.lo-photo { position: fixed; inset: 0; z-index: 60; background: #14120E; display: flex; flex-direction: column; }
+.lo-photo-bar { display: flex; gap: 8px; padding: calc(10px + env(safe-area-inset-top)) 12px 10px; }
+.lo-photo-bar button { color: #FBFAF6; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 14px; padding: 8px 10px; min-height: 40px; border-radius: 8px; background: rgba(255,255,255,.08); }
+.lo-photo-scroll { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; }
+.lo-photo-scroll img { display: block; }
+.lo-photo-hint { color: #A8A28C; text-align: center; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 12px; padding: 8px 0 calc(10px + env(safe-area-inset-bottom)); }
