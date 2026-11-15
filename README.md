@@ -1,13 +1,20 @@
-# Personal Ledger (build b20)
+# Personal Ledger (build b21)
 
 Live at https://anoose2007ali-ctrl.github.io/ledger-app/ (GitHub Pages + Firebase sync, collection `ledger/{uid}`).
 
-## Updating to b20
+## Updating to b21
 1. Before uploading, make sure every device is signed in and shows **Synced** under the page title.
 2. Upload the **files inside** this folder (not the folder, not the zip) to the repo with Add file > Upload files, replacing the old ones, then commit.
-3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b20**.
+3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b21**.
 4. Don't delete the home screen icon. A new icon starts with empty storage.
 5. Open Settings (gear) > **Download backup** and keep the file somewhere safe, like Google Drive.
+
+## What's new in b21: GD prep = studying the lecture (2 in 1)
+- The task the day before a GD now shows **"Study before the GD:"** followed by the study-plan items and University lectures for that subject that are due by the GD. For example: Pathology – Lecture 1 · Pathology – Lecture 2.
+- Ticking it **also ticks those items**, so studying the lecture and getting ready for the GD is one job. Plan items it covers move into it, so they don't appear twice on Today.
+- **GDs** in Today's classes and in Study > Week show **"Study first: N"** until the lectures are done, then **"Ready ✓"**.
+- Unticking the GD task undoes only what it ticked. Anything you finished on your own stays done.
+- New GD tasks are named "Study for GD: …". Labs keep "Prepare for Lab: …".
 
 ## What's new in b20
 - **Study plans in import codes.** A code from Claude can now carry a study plan as well as your classes:

@@ -774,3 +774,7 @@ input, textarea, select { unicode-bidi: plaintext; }
 .lo-plan { background: #E3ECE6; border-radius: 12px; padding: 8px 12px; margin-bottom: 12px; }
 .lo-plan-h { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #2F5D4F; font-weight: 700; margin-bottom: 2px; }
 .lo-plan .lo-check { width: 26px; height: 26px; min-width: 26px; }
+
+/* b21 */
+.lo-covers { margin-top: 4px; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 12px; color: #5C5847; background: #EAE1EC; border-radius: 8px; padding: 5px 8px; line-height: 1.35; }
+.lo-covers b { color: #6B4E71; font-weight: 700; }
