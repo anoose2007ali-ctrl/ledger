@@ -1,13 +1,21 @@
-# Personal Ledger (build b19)
+# Personal Ledger (build b20)
 
 Live at https://anoose2007ali-ctrl.github.io/ledger-app/ (GitHub Pages + Firebase sync, collection `ledger/{uid}`).
 
-## Updating to b19
+## Updating to b20
 1. Before uploading, make sure every device is signed in and shows **Synced** under the page title.
 2. Upload the **files inside** this folder (not the folder, not the zip) to the repo with Add file > Upload files, replacing the old ones, then commit.
-3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b19**.
+3. Wait a minute or two, then open the site **twice**. The bottom of the app should say **b20**.
 4. Don't delete the home screen icon. A new icon starts with empty storage.
 5. Open Settings (gear) > **Download backup** and keep the file somewhere safe, like Google Drive.
+
+## What's new in b20
+- **Study plans in import codes.** A code from Claude can now carry a study plan as well as your classes:
+  - The plan becomes a **goal** (Life > Goals) with a progress bar.
+  - Each day's study items become tasks for that day, linked to the goal.
+  - Any habit that comes with the plan (for example, Practical: 20 slides) is added too.
+- **Study > Week** shows each day's plan items under that day's classes. Tick them right there.
+- Importing the same code again never adds a plan, task or habit twice.
 
 ## What's new in b19
 
