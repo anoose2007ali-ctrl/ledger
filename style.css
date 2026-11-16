@@ -797,3 +797,12 @@ input, textarea, select { unicode-bidi: plaintext; }
 .lo-lock-danger { margin-top: 20px; width: 100%; min-height: 46px; border-radius: 12px; background: #9C4A32; color: #FBFAF6; font-weight: 600; font-size: 15px; }
 .lo-lockbox { margin-bottom: 18px; padding-bottom: 16px; border-bottom: 1px solid #E3DFCF; }
 .lo-lockform { display: flex; flex-direction: column; gap: 8px; }
+
+/* b25 */
+.lo-open { flex-shrink: 0; display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border-radius: 999px; background: #E5E8F2; color: #2E4374; font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; font-size: 13px; font-weight: 700; text-decoration: none; }
+.lo-open:active { transform: scale(.96); }
+.lo-dots-pin i { transition: background .12s, border-color .12s, transform .12s; }
+.lo-dots-pin i.on { background: #2F5D4F; border-color: #2F5D4F; animation: lo-pop .18s ease-out; }
+@keyframes lo-pop { 0% { transform: scale(.6); } 70% { transform: scale(1.25); } 100% { transform: scale(1); } }
+.lo-shake { animation: lo-shake .4s ease-in-out; }
+@keyframes lo-shake { 0%, 100% { transform: none; } 20% { transform: translateX(-10px); } 40% { transform: translateX(10px); } 60% { transform: translateX(-6px); } 80% { transform: translateX(6px); } }
