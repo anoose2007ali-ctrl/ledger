@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Personal Ledger (b25)</title>
+<title>Personal Ledger (b26)</title>
 <link rel="manifest" href="./manifest.json" />
 <meta name="theme-color" content="#2F5D4F" />
 <link rel="apple-touch-icon" sizes="180x180" href="./icon-180.png?v=owl" />
@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="apple-mobile-web-app-title" content="Ledger" />
-<link rel="stylesheet" href="./style.css?v=b25" />
+<link rel="stylesheet" href="./style.css?v=b26" />
 <style>
   html, body { background: #EFEBE1; margin: 0; }
   #boot { min-height: 100vh; display: flex; align-items: center; justify-content: center;
@@ -21,7 +21,7 @@
 </style>
 </head>
 <body>
-<div id="root"><div id="boot">Loading your ledger… (build b25)</div></div>
+<div id="root"><div id="boot">Loading your ledger… (build b26)</div></div>
 <div id="boot-error"></div>
 
 <script>
@@ -30,7 +30,7 @@
     if (window.__booted) return;
     var box = document.getElementById("boot-error");
     box.style.display = "block";
-    box.textContent = "Couldn't start the app (build b25):\n\n" + (e.message || "unknown error") +
+    box.textContent = "Couldn't start the app (build b26):\n\n" + (e.message || "unknown error") +
       "\n\nTry closing and reopening it. If it keeps happening, screenshot this box.";
   });
 </script>
@@ -42,13 +42,13 @@
     new MutationObserver(function () { if (!t) t = requestAnimationFrame(run); }).observe(document.documentElement, { childList: true, subtree: true });
   })();
 </script>
-<script src="./fb.js?v=b25"></script>
-<script src="./storage-shim.js?v=b25"></script>
-<script src="./app.js?v=b25"></script>
+<script src="./fb.js?v=b26"></script>
+<script src="./storage-shim.js?v=b26"></script>
+<script src="./app.js?v=b26"></script>
 <script>
   // On a new build, clear any old cached copy once, then register the offline cache.
   (async function () {
-    var BUILD = "b25";
+    var BUILD = "b26";
     try {
       if (localStorage.getItem("ledger-build-seen") !== BUILD) {
         if (navigator.serviceWorker) {
