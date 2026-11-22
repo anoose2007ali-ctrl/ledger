@@ -1,9 +1,9 @@
 // Offline cache. Only handles this site's own files, so outside requests
 // (like Google sign-in) are never touched.
-// - File names carry the build (app.js?v=b26), so a new build never mixes with old files.
+// - File names carry the build (app.js?v=b27), so a new build never mixes with old files.
 // - Install downloads fresh copies (cache: "reload"), never the phone's short-term copy.
 // - The page itself comes from the network first, so a new build shows on the next open.
-const V = "b26";
+const V = "b27";
 const CACHE = "ledger-cache-" + V;
 const ASSETS = ["./", "./index.html", "./app.js?v=" + V, "./style.css?v=" + V, "./fb.js?v=" + V, "./storage-shim.js?v=" + V,
   "./manifest.json", "./icon-180.png", "./icon-192.png", "./icon-512.png", "./icon-maskable-512.png"];
